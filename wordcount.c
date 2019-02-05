@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         if (fork() == 0)
         {
             forkId = getpid();
-            printf("process id %ld as well as argv[%d] = %s\n", forkId, i, argv[i]);
+            //printf("process id %ld as well as argv[%d]\t", forkId, i);
             countword(argv[i]);
             exit(0);
         }
@@ -45,7 +45,7 @@ void countword(char *fname)
 
     if (f == NULL)
     {
-        fprintf(stderr, "Failed to open file\n");
+        fprintf(stderr, "Failed to open file: %s\n", fname);
         return;
     }
     
