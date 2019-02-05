@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//prototype to wordcount function
+//accepts pointer to char variable
+//uses that char array to open a file and count the words in it
+//returns nothing
 void countword(char*);
 
 int main(int argc, char *argv[])
@@ -35,5 +39,16 @@ int main(int argc, char *argv[])
 
 void countword(char *fname)
 {   
-    printf("function test %s\n", fname);
+    FILE *f;
+    //printf("function test %s\n", fname);
+    f = fopen(fname, "r");
+
+    if (f == NULL)
+    {
+        fprintf(stderr, "Failed to open file\n");
+        return;
+    }
+    
+    printf("Good so far insert code to count here\n");
+    close(f);
 }
