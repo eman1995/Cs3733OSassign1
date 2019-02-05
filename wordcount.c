@@ -35,6 +35,5 @@ int main(int argc, char *argv[])
 
 void countword(char *fname)
 {   
-    char *filename = fname;
     printf("function test %s\n", fname);
 }
