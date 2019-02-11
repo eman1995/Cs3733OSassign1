@@ -1,0 +1,6 @@
+Child precess for file_3: number of words is 10
+Child precess for file_1: number of words is 1
+Child precess for file_2: number of words is 5
+Child precess for file_4: number of words is 12
+Failed to open file: file_5
+All 5 files have been counted!

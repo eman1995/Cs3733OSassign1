@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     {
         wait(&status);
     }
-
+    printf("All %d files have been counted!\n", argc-1);
     //printf("This is argc = %d\n", argc);
     //printf("argument1: %s\n", argv[1]);
     //printf("argument4: %s\n", argv[4]);
@@ -40,15 +40,23 @@ int main(int argc, char *argv[])
 void countword(char *fname)
 {   
     FILE *f;
+    int count = 0;
+    char word;
+
     //printf("function test %s\n", fname);
     f = fopen(fname, "r");
 
     if (f == NULL)
     {
-        fprintf(stderr, "Failed to open file: %s\n", fname);
+        printf("Failed to open file: %s\n", fname);
         return;
     }
-    
-    printf("Good so far insert code to count here\n");
+
+    while ((word=getc(f)) != EOF)
+    {
+        if (word == ' ' || word == '\t' || word == '\n')
+            count++;
+    }
+    printf("Child precess for %s: number of words is %d\n", fname, count);
     close(f);
 }

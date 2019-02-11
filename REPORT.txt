@@ -1,0 +1,5 @@
+#1 For this assignment I did not collaborate with anyone, I used notes from previous courses and
+I searched for information online.
+#2 I do belive I have done the assignment correctly.
+#3 Learning how to use fork() properly was a good hurdle to overcome as not properly controlling my process
+could lead my program to use up all memory on my machine and fox servers.
